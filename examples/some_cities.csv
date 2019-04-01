@@ -1,0 +1,21 @@
+id,lat,lon,state_abbrev,state_id,state_name,city_name,x
+1,33.1008,-85.5297,AL,1,Alabama,Abanda,ABANDA
+2,31.5664,-85.2514,AL,1,Alabama,Abbeville,ABBEVILLE
+3,33.5903,-86.9492,AL,1,Alabama,Adamsville,ADAMSVILLE
+4,34.2000,-87.1778,AL,1,Alabama,Addison,ADDISON
+5,32.8764,-87.7408,AL,1,Alabama,Akron,AKRON
+6,34.0223,-86.0455,AL,1,Alabama,Alabama City,ALABAMACITY
+7,33.2311,-86.8236,AL,1,Alabama,Alabaster,ALABASTER
+8,34.6000,-86.9778,AL,1,Alabama,Albany,ALBANY
+9,34.2653,-86.2111,AL,1,Alabama,Albertville,ALBERTVILLE
+10,32.9331,-85.9361,AL,1,Alabama,Alexander City,ALEXANDERCITY
+11,33.7658,-85.8842,AL,1,Alabama,Alexandria,ALEXANDRIA
+12,33.1261,-88.1542,AL,1,Alabama,Aliceville,ALICEVILLE
+13,33.9042,-86.5164,AL,1,Alabama,Allgood,ALLGOOD
+14,34.6942,-88.1103,AL,1,Alabama,Allsboro,ALLSBORO
+15,34.0292,-86.3206,AL,1,Alabama,Altoona,ALTOONA
+16,31.3000,-86.4833,AL,1,Alabama,Andalusia,ANDALUSIA
+17,34.9200,-87.2703,AL,1,Alabama,Anderson,ANDERSON
+18,33.6611,-85.8333,AL,1,Alabama,Anniston,ANNISTON
+19,34.3278,-86.4986,AL,1,Alabama,Arab,ARAB
+20,33.5761,-85.5172,AL,1,Alabama,Arbacoochee,ARBACOOCHEE
