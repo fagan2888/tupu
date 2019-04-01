@@ -7,6 +7,18 @@ Its goal is to be able to quickly compute, for every coordinate in a list:
 - Nearest neighbors: distances to the closest point in another list (e.g. distances from each point to a city), and the identity of such point
 - Number of neighbors: number of points of another list within a certain distance or buffer.
 
+
+## Dev Install
+
+After cloning the repo and opening the panflute folder:
+
+`python setup.py install`
+: installs the package locally
+
+`python setup.py develop`
+: installs locally with a symlink so changes are automatically updated
+
+
 ## Usage
 
 From Python:
