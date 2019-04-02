@@ -25,14 +25,17 @@ From Python:
 
 ```python
 import thatkiy
-...
+# TODO...
 ```
 
 From the command line:
 
+```bash
+thatkiy some_cities.csv?id=uid --output=augmented.tsv --distance=dist_ny,40.7143,-74.0060
 ```
-...
-```
+
+(See also [examples/README.md])
+
 
 ## Dependencies:
 
@@ -48,6 +51,13 @@ I would have preferred to use "topo", but it's already a quite popular name on G
 ![Gordon McEwan, "The Incas: New Perspectives", p.179](docs/incas_new_perspective_mcewan_p179.png)
 [Gordon McEwan, "The Incas: New Perspectives", p.179](https://books.google.com/books?id=J3WZuTINl2QC&pg=PA179)
 
+![Text](examples/incidence_of_travel_moore_p208.png)
+
+[Jerry D. Moore, "Incidence of Travel: Recent Journeys in Ancient South America", p.208](https://books.google.com/books?id=B_kmDgAAQBAJ&pg=PA208&lpg=PA208)
+
+
+
+
 
 ## Why not geopandas, etc.?
 
@@ -61,3 +71,5 @@ https://stackoverflow.com/questions/54804073/how-can-i-accelerate-a-geopandas-sp
 - Not parallelized, although that should be trivial
 - Not Cython, although most of the heavy load is already in C.
 - Only deals with points, not with lines/polygons
+- Currently only stores distance to closest city (although allowing more is trivial)
+- Currently does not compute number of points within a given distance (although allowing more is trivial)

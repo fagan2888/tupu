@@ -19,6 +19,8 @@ a Python wrapper to the `libspatialindex<https://libspatialindex.org/>`_ library
 """
 
 
-from .io import cli
+from .utils import load_csv, save_csv, get_args_from_filename, get_coords
 from .distance import distance
 from .geoindex import GeoIndex
+from .table import Table
+from .io import cli

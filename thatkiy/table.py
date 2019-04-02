@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from .utils import get_args_from_filename, load_csv, save_csv, get_coords
+from .utils import load_csv, save_csv, get_args_from_filename, get_coords
 from .geoindex import GeoIndex
 from .distance import distance
 
