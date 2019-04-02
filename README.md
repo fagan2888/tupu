@@ -1,11 +1,14 @@
 # `tupu` - Fast geodesic distances in Python
 
-This is a **personal project** centered around geodesic distances.
-Its goal is to be able to quickly compute, for every coordinate in a list:
+Tupu is a Python project centered around efficiently computing geodesic distances between points or lists. Features include:
 
-- Distances to a given point (e.g. distances from each point to NYC)
+- Distances to a given point (e.g. distances from each point in a list to NYC)
 - Nearest neighbors: distances to the closest point in another list (e.g. distances from each point to a city), and the identity of such point
 - Number of neighbors: number of points of another list within a certain distance or buffer.
+
+Its main goals are to be fast and simple to use.
+However, the project is mostly personal, so although issues and pull requests are welcome,
+I won't work on feature requests.
 
 
 ## Dev Install
