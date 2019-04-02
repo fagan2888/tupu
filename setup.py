@@ -15,9 +15,9 @@ from shutil import rmtree
 from setuptools import find_packages, setup, Command
 
 # Package meta-data.
-NAME = 'thatkiy'
+NAME = 'tupu'
 DESCRIPTION = 'Fast geodesic distances between sets'
-URL = 'https://github.com/sergiocorreia/thatkiy'
+URL = 'https://github.com/sergiocorreia/tupu'
 EMAIL = 'sergio.correia@gmail.com'
 AUTHOR = 'Sergio Correia'
 REQUIRES_PYTHON = '>=3.7.0'
@@ -109,7 +109,7 @@ setup(
     # py_modules=['mypackage'],
 
      entry_points={
-         'console_scripts': ['thatkiy=thatkiy:cli'],
+         'console_scripts': ['tupu=tupu:cli'],
      },
     install_requires=REQUIRED,
     extras_require=EXTRAS,

@@ -1,7 +1,7 @@
 Feature-complete example:
 
 ```
-cls && thatkiy some_cities.csv?id=uid
+cls && tupu some_cities.csv?id=uid
 	--output=augmented.tsv
 		--distance=dist_ny,40.7143,-74.0060
 		--distance=dist_dc,38.9072,-77.0369

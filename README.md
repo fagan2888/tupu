@@ -1,4 +1,4 @@
-# `thatkiy` - Fast geodesic distances in Python
+# `tupu` - Fast geodesic distances in Python
 
 This is a **personal project** centered around geodesic distances.
 Its goal is to be able to quickly compute, for every coordinate in a list:
@@ -24,14 +24,14 @@ After cloning the repo and opening the panflute folder:
 From Python:
 
 ```python
-import thatkiy
+import tupu
 # TODO...
 ```
 
 From the command line:
 
 ```bash
-thatkiy some_cities.csv?id=uid --output=augmented.tsv --distance=dist_ny,40.7143,-74.0060
+tupu some_cities.csv?id=uid --output=augmented.tsv --distance=dist_ny,40.7143,-74.0060
 ```
 
 (See also [examples/README.md])
@@ -43,9 +43,9 @@ thatkiy some_cities.csv?id=uid --output=augmented.tsv --distance=dist_ny,40.7143
 - [`pyproj`](https://github.com/pyproj4/pyproj) (wrapper around [`proj4`](https://proj4.org/))
 
 
-## Why "thatkiy"?
+## Why "tupu"?
 
-Thatkiy was one of the Inca measures of distance, equivalent to about 130 cm.
+Tupu was one of the Inca measures of distance, equivalent to about 130 cm.
 I would have preferred to use "topo", but it's already a quite popular name on Github, and has other meanings.
 
 ![Gordon McEwan, "The Incas: New Perspectives", p.179](docs/incas_new_perspective_mcewan_p179.png)

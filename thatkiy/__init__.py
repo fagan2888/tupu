@@ -1,7 +1,7 @@
 """
-Thatkiy: fast geodesic distances
+tupu: fast geodesic distances
 ================================
-Thatkiy is a Python package that calculates
+tupu is a Python package that calculates
 `geodesic distances<https://en.wikipedia.org/wiki/Geodesics_on_an_ellipsoid>`_
 between points or sets of points.
 
@@ -11,7 +11,7 @@ the closest city to each point, it avoids brute-force computation of the NxM
 distances, and instead indexes each city through
 `R-Trees<https://en.wikipedia.org/wiki/R-tree>`_.
 
-Thatkiy is build on two key packages:
+tupu is build on two key packages:
 
 1. Geodesic distances are computed through pyproj, a Python interface to the PROJ.4 library (written in C).
 2. Spatial indexing is done through the `rtree<http://toblerity.org/rtree/>`_ package,

@@ -12,10 +12,10 @@ def cli():
     note1 = '---------------------------------------------------------------'
     note2 = 'Notes:'
     note3 = '- The --distance and --neigbor arguments can be repeated.'
-    note4 = '\nExample:\n> thatkiy some_cities.csv \n\t-o augmented.csv \n\t-d dist_ny,40.71,-74.0 \n\t-d dist_dc,38.9,-77.0 \n\t-n dist_reserve,id_reserve,reserve_cities.tsv?id=feature_id\n\t-n dist_self,id_self'
+    note4 = '\nExample:\n> tupu some_cities.csv \n\t-o augmented.csv \n\t-d dist_ny,40.71,-74.0 \n\t-d dist_dc,38.9,-77.0 \n\t-n dist_reserve,id_reserve,reserve_cities.tsv?id=feature_id\n\t-n dist_self,id_self'
     notes = '\n'.join((note1, note2, note3, note4, note1))
 
-    parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter, description='thatkiy: calculate geodesic distances between points and sets', epilog=notes)
+    parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter, description='tupu: calculate geodesic distances between points and sets', epilog=notes)
     parser.add_argument('filename')
     parser.add_argument("--verbose", help="increase output verbosity", action="store_true")
     parser.add_argument("--timeit", help="report elapsed time", action="store_true")
