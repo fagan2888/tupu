@@ -7,6 +7,7 @@ Spatial index using an R-Tree
 # Imports
 # ---------------------------
 
+import pyproj
 import rtree
 from .distance import distance
 
@@ -14,7 +15,7 @@ from .distance import distance
 # Classes
 # ---------------------------
 
-class GeoIndex(object):
+class GeoIndex:
 
     def __init__(self, data=None, leaf_capacity=100, near_minimum_overlap_factor=32):
         """ <data> is an iterator containing (id, x, y) elements.

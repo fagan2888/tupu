@@ -45,7 +45,7 @@ From the command line:
 Thatkiy was one of the Inca measures of distance, equivalent to about 130 cm.
 I would have preferred to use "topo", but it's already a quite popular name on Github, and has other meanings.
 
-![Gordon McEwan, "The Incas: New Perspectives", p.179](incas_new_perspective_mcewan_p179.png)
+![Gordon McEwan, "The Incas: New Perspectives", p.179](docs/incas_new_perspective_mcewan_p179.png)
 [Gordon McEwan, "The Incas: New Perspectives", p.179](https://books.google.com/books?id=J3WZuTINl2QC&pg=PA179)
 
 
