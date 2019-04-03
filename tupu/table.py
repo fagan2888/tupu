@@ -55,10 +55,10 @@ class Table:
             print()
 
 
-    def add_distance_to_table(self, other_table, id_name, dist_name):
+    def add_distance_to_table(self, other_table, id_name, dist_name, match_self=True):
 
         if self.verbose:
-            print(f' - Computing distance to nearest neighbor from {other_table.filename}; storing distance in "{dist_name}" and neighbor id in "{id_name}"')
+            print(f' - Computing distance to nearest neighbor from {other_table.filename}; storing distance in "{dist_name}" and neighbor id in "{id_name}"; match self? {match_self}')
         
         assert id_name not in self.header
         assert dist_name not in self.header
@@ -70,6 +70,7 @@ class Table:
         verbose = self.verbose
         lat_i = self.lat_i
         lon_i = self.lon_i
+        id_i = self.id_i
 
         # Compute all distances
         for i, row in enumerate(self.data, 1):
@@ -79,7 +80,14 @@ class Table:
             lat = float(row[lat_i])
             lon = float(row[lon_i])
             
-            neighbor_id = idx.nearest(lat, lon)
+            if match_self:
+                neighbor_id = idx.nearest(lat, lon)
+            else:
+                identifier = int(row[id_i])
+                neighbor_id = idx.nearest(lat, lon, identifier)
+                assert neighbor_id != identifier
+                neighbor_id,  identifier
+
             dist = distance(lat, lon, *idx.coords[neighbor_id])
             row.extend([f'{dist:.4f}', neighbor_id])
 

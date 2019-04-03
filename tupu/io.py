@@ -37,23 +37,25 @@ def cli():
     assert out_fn.suffix in ('.raw', '.tsv', '.csv'), out_fn.suffix
 
     # Compute distances between each input row and given points
-    for _ in args.distance:
-        dist_name, lat, lon = validate_cli_distance(_)
-        if verbose:
-            print(f' - Computing distance to lat={lat} lon={lon} and storing it in "{dist_name}"')
-            input_table.add_distance_to_point(lat, lon, dist_name)
+    if args.distance is not None:
+        for _ in args.distance:
+            dist_name, lat, lon = validate_cli_distance(_)
+            if verbose:
+                print(f' - Computing distance to lat={lat} lon={lon} and storing it in "{dist_name}"')
+                input_table.add_distance_to_point(lat, lon, dist_name)
 
     # Compute minimum distances between each input row and a given *set* of points
-    for _ in args.neighbor:
-        id_name, dist_name, fn = validate_cli_neighbor(_)
+    if args.neighbor is not None:
+        for _ in args.neighbor:
+            id_name, dist_name, fn, match_self = validate_cli_neighbor(_)
 
-        if fn is None:
-            # Distance to the list itself
-            input_table.add_distance_to_self(id_name, dist_name)
-        else:
-            # Distance to another list
-            neighbor_table = Table(fn, verbose=verbose)
-            input_table.add_distance_to_table(neighbor_table, id_name, dist_name)
+            if fn is None:
+                # Distance to the list itself
+                input_table.add_distance_to_self(id_name, dist_name)
+            else:
+                # Distance to another list
+                neighbor_table = Table(fn, verbose=verbose)
+                input_table.add_distance_to_table(neighbor_table, id_name, dist_name, match_self=match_self)
 
     # Save data        
     input_table.save(out_fn)
@@ -77,9 +79,17 @@ def validate_cli_distance(input):
 
 
 def validate_cli_neighbor(input):
+    # Three possible lists
+    # HEADER_ID, HEADER_DIST [Implictly uses OWN LIST AND EXCLUDES MATCHES TO SAME ID]
+    # HEADER_ID, HEADER_DIST, FN [Implicitly ALLOWS matches for same id]
+    # HEADER_ID, HEADER_DIST, FN, MATCH_SELF
     input = input.split(',')
-    assert len(input) in (2,3), f'--neighbor requires either <id,dist,fn> or <id,dist>, but received {input}'
+    assert len(input) in (2,3,4), f'--neighbor requires either <id,dist,fn,match_self> or <id,dist,match_self>, but received {input}'
+    if len(input) == 3:
+        input.append(1)
     if len(input) == 2:
         input.append(None)
-    id_name, dist_name, fn = input
-    return id_name, dist_name, fn
+        input.append(0)
+    id_name, dist_name, fn, match_self = input
+    match_self = bool(int(match_self))
+    return id_name, dist_name, fn, match_self
